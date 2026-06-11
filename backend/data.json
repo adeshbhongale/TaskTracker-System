@@ -1,0 +1,1524 @@
+{
+  "departments": [
+    {
+      "name": "MERN Stack",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "QA Testing",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "DevOps",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "UI/UX Design",
+      "status": "ACTIVE"
+    }
+  ],
+  "users": [
+    {
+      "name": "Aditya Birla",
+      "email": "man-1@trucode.com",
+      "phone": "8888888888",
+      "designation": "CEO",
+      "employeeId": "EMP-0002",
+      "role": "MANAGEMENT",
+      "approvalStatus": "APPROVED"
+    },
+    {
+      "name": "Vikram Mehta",
+      "email": "man-2@trucode.com",
+      "phone": "8888888887",
+      "designation": "VP Engineering",
+      "employeeId": "EMP-0003",
+      "role": "MANAGEMENT",
+      "approvalStatus": "APPROVED"
+    },
+    {
+      "name": "Mrunal Deshmukh",
+      "email": "lead-1@trucode.com",
+      "phone": "7777777777",
+      "designation": "MERN Tech Lead",
+      "employeeId": "EMP-0100",
+      "role": "TEAM_LEAD",
+      "approvalStatus": "APPROVED",
+      "departmentName": "MERN Stack"
+    },
+    {
+      "name": "Suresh Kumar",
+      "email": "lead-2@trucode.com",
+      "phone": "7777777776",
+      "designation": "DevOps Lead",
+      "employeeId": "EMP-0200",
+      "role": "TEAM_LEAD",
+      "approvalStatus": "APPROVED",
+      "departmentName": "DevOps"
+    },
+    {
+      "name": "Aniket Rane",
+      "email": "lead-3@trucode.com",
+      "phone": "7777777775",
+      "designation": "UI/UX Tech Lead",
+      "employeeId": "EMP-0300",
+      "role": "TEAM_LEAD",
+      "approvalStatus": "APPROVED",
+      "departmentName": "UI/UX Design"
+    },
+    {
+      "name": "Adesh Bhongale",
+      "email": "contri-1@trucode.com",
+      "phone": "6666666666",
+      "designation": "Senior Developer",
+      "employeeId": "EMP-0101",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "MERN Stack"
+    },
+    {
+      "name": "Rahul Sharma",
+      "email": "contri-2@trucode.com",
+      "phone": "6666666665",
+      "designation": "Junior Developer",
+      "employeeId": "EMP-0102",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "MERN Stack"
+    },
+    {
+      "name": "Priti Patil",
+      "email": "contri-3@trucode.com",
+      "phone": "6666666664",
+      "designation": "QA Engineer",
+      "employeeId": "EMP-0120",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "QA Testing"
+    },
+    {
+      "name": "Snehal Joshi",
+      "email": "contri-4@trucode.com",
+      "phone": "6666666663",
+      "designation": "Automation Specialist",
+      "employeeId": "EMP-0121",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "QA Testing"
+    },
+    {
+      "name": "Rohit Kadam",
+      "email": "contri-5@trucode.com",
+      "phone": "6666666662",
+      "designation": "SRE Specialist",
+      "employeeId": "EMP-0201",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "DevOps"
+    },
+    {
+      "name": "Amit Gholap",
+      "email": "contri-6@trucode.com",
+      "phone": "6666666661",
+      "designation": "Cloud Engineer",
+      "employeeId": "EMP-0202",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "DevOps"
+    },
+    {
+      "name": "Maya Sen",
+      "email": "contri-7@trucode.com",
+      "phone": "6666666660",
+      "designation": "Lead UI/UX Designer",
+      "employeeId": "EMP-0301",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "UI/UX Design"
+    },
+    {
+      "name": "Kunal Verma",
+      "email": "contri-8@trucode.com",
+      "phone": "6666666659",
+      "designation": "Graphic Designer",
+      "employeeId": "EMP-0302",
+      "role": "CONTRIBUTOR",
+      "approvalStatus": "APPROVED",
+      "departmentName": "UI/UX Design"
+    },
+    {
+      "name": "Shrikant Shinde",
+      "email": "user-1@trucode.com",
+      "phone": "5555555555",
+      "designation": "Intern Developer",
+      "employeeId": "EMP-9991",
+      "role": "NORMAL_USER",
+      "approvalStatus": "PENDING"
+    },
+    {
+      "name": "Varsha Bhosale",
+      "email": "user-2@trucode.com",
+      "phone": "5555555554",
+      "designation": "Intern Designer",
+      "employeeId": "EMP-9992",
+      "role": "NORMAL_USER",
+      "approvalStatus": "PENDING"
+    }
+  ],
+  "projects": [
+    {
+      "projectCode": "PRJ-882731",
+      "name": "Trucode Dashboard System",
+      "description": "Enterprise Operational performance system built using MongoDB, Express, React, Node, and real-time Socket.IO communications.",
+      "priority": "CRITICAL",
+      "departmentName": "MERN Stack",
+      "startDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY + 15 Days",
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "projectCode": "PRJ-452109",
+      "name": "Cloud Infrastructure Migration",
+      "description": "Migrating legacy on-prem services to Kubernetes Cluster (EKS) in AWS with dynamic multi-tier monitoring.",
+      "priority": "HIGH",
+      "departmentName": "DevOps",
+      "startDate": "TODAY - 20 Days",
+      "targetEndDate": "TODAY + 10 Days",
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "projectCode": "PRJ-903112",
+      "name": "E-Commerce Mobile UX",
+      "description": "Redesigning the mobile experience to maximize checkout rate and streamline micro-animations.",
+      "priority": "MEDIUM",
+      "departmentName": "UI/UX Design",
+      "startDate": "TODAY - 5 Days",
+      "targetEndDate": "TODAY + 25 Days",
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS"
+    }
+  ],
+  "phases": [
+    {
+      "projectName": "Trucode Dashboard System",
+      "name": "UI/UX & Requirements",
+      "description": "Wireframes, Styleguide definition, and functional specifications gathering.",
+      "weightage": 30,
+      "targetEndDate": "TODAY - 10 Days",
+      "status": "COMPLETED"
+    },
+    {
+      "projectName": "Trucode Dashboard System",
+      "name": "Core API Development",
+      "description": "Designing data structures, endpoints, JWT authentication flow, and notifications architecture.",
+      "weightage": 50,
+      "targetEndDate": "TODAY + 5 Days",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "projectName": "Trucode Dashboard System",
+      "name": "Deployment & QA",
+      "description": "Integration test suites execution, system validation, and CI/CD pipelines deployment.",
+      "weightage": 20,
+      "targetEndDate": "TODAY + 15 Days",
+      "status": "NOT_STARTED"
+    },
+    {
+      "projectName": "Cloud Infrastructure Migration",
+      "name": "Audit & Planning",
+      "description": "Analyzing service dependencies and outlining target architecture on AWS.",
+      "weightage": 40,
+      "targetEndDate": "TODAY - 5 Days",
+      "status": "COMPLETED"
+    },
+    {
+      "projectName": "Cloud Infrastructure Migration",
+      "name": "Migration Execution",
+      "description": "Setup Terraform variables, deploy Helm charts, and replicate databases.",
+      "weightage": 60,
+      "targetEndDate": "TODAY + 10 Days",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "projectName": "E-Commerce Mobile UX",
+      "name": "Design & Prototyping",
+      "description": "Wireframes, Styleguide definition, and high fidelity mobile prototypes.",
+      "weightage": 50,
+      "targetEndDate": "TODAY + 10 Days",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "projectName": "E-Commerce Mobile UX",
+      "name": "User Testing & Feedback",
+      "description": "Execute usability tests and gather quantitative feedbacks.",
+      "weightage": 50,
+      "targetEndDate": "TODAY + 25 Days",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Completed Task Alpha for contri-1",
+      "description": "Description for complete task Alpha of contri-1",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-1",
+      "description": "Description for complete task Beta of contri-1",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-1",
+      "description": "Detailed instructions for active task of contri-1",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-1",
+      "description": "Detailed refactoring scope for contri-1",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-1",
+      "description": "This task should have been delivered but got delayed for contri-1",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-1",
+      "description": "Future backlog item for contri-1",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-1",
+      "description": "Future backlog item B for contri-1",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-2",
+      "description": "Description for complete task Alpha of contri-2",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-2",
+      "description": "Description for complete task Beta of contri-2",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-2",
+      "description": "Detailed instructions for active task of contri-2",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-2",
+      "description": "Detailed refactoring scope for contri-2",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-2",
+      "description": "This task should have been delivered but got delayed for contri-2",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-2",
+      "description": "Future backlog item for contri-2",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-2",
+      "description": "Future backlog item B for contri-2",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-2@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-3",
+      "description": "Description for complete task Alpha of contri-3",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-3",
+      "description": "Description for complete task Beta of contri-3",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-3",
+      "description": "Detailed instructions for active task of contri-3",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-3",
+      "description": "Detailed refactoring scope for contri-3",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-3",
+      "description": "This task should have been delivered but got delayed for contri-3",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-3",
+      "description": "Future backlog item for contri-3",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-3",
+      "description": "Future backlog item B for contri-3",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-3@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-4",
+      "description": "Description for complete task Alpha of contri-4",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-4",
+      "description": "Description for complete task Beta of contri-4",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-4",
+      "description": "Detailed instructions for active task of contri-4",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-4",
+      "description": "Detailed refactoring scope for contri-4",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-4",
+      "description": "This task should have been delivered but got delayed for contri-4",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-4",
+      "description": "Future backlog item for contri-4",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-4",
+      "description": "Future backlog item B for contri-4",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Deployment & QA",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "contri-4@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-4\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-5",
+      "description": "Description for complete task Alpha of contri-5",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-5",
+      "description": "Description for complete task Beta of contri-5",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-5",
+      "description": "Detailed instructions for active task of contri-5",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-5",
+      "description": "Detailed refactoring scope for contri-5",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-5",
+      "description": "This task should have been delivered but got delayed for contri-5",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-5",
+      "description": "Future backlog item for contri-5",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-5",
+      "description": "Future backlog item B for contri-5",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-5@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-5\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-6",
+      "description": "Description for complete task Alpha of contri-6",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-6",
+      "description": "Description for complete task Beta of contri-6",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-6",
+      "description": "Detailed instructions for active task of contri-6",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-6",
+      "description": "Detailed refactoring scope for contri-6",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-6",
+      "description": "This task should have been delivered but got delayed for contri-6",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-6",
+      "description": "Future backlog item for contri-6",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-6",
+      "description": "Future backlog item B for contri-6",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "contri-6@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-6\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-7",
+      "description": "Description for complete task Alpha of contri-7",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-7",
+      "description": "Description for complete task Beta of contri-7",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-7",
+      "description": "Detailed instructions for active task of contri-7",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-7",
+      "description": "Detailed refactoring scope for contri-7",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-7",
+      "description": "This task should have been delivered but got delayed for contri-7",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-7",
+      "description": "Future backlog item for contri-7",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-7",
+      "description": "Future backlog item B for contri-7",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-7@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-7\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Alpha for contri-8",
+      "description": "Description for complete task Alpha of contri-8",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Alpha for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Completed Task Beta for contri-8",
+      "description": "Description for complete task Beta of contri-8",
+      "priority": "LOW",
+      "targetStartDate": "TODAY - 8 Days",
+      "targetEndDate": "TODAY - 3 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Completed Task Beta for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Active Development Task for contri-8",
+      "description": "Detailed instructions for active task of contri-8",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 8 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Active Development Task for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Refactoring Task for contri-8",
+      "description": "Detailed refactoring scope for contri-8",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY - 1 Days",
+      "targetEndDate": "TODAY + 5 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Refactoring Task for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Overdue Target Delivery for contri-8",
+      "description": "This task should have been delivered but got delayed for contri-8",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 15 Days",
+      "targetEndDate": "TODAY - 2 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Overdue Target Delivery for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task A for contri-8",
+      "description": "Future backlog item for contri-8",
+      "priority": "LOW",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task A for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Upcoming Sprint Task B for contri-8",
+      "description": "Future backlog item B for contri-8",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 10 Days",
+      "targetEndDate": "TODAY + 18 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "contri-8@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Upcoming Sprint Task B for contri-8\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Management Overhead Task for lead-1",
+      "description": "Review department deliverables for lead-1",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 4 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "lead-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Management Overhead Task for lead-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Strategic Planning Task for lead-1",
+      "description": "Planning future phases and resources for lead-1",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 10 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "lead-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Strategic Planning Task for lead-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Resource Allocation Review for lead-1",
+      "description": "Review contributor workloads for next sprint",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Core API Development",
+      "projectName": "Trucode Dashboard System",
+      "assigneeEmails": [
+        "lead-1@trucode.com"
+      ],
+      "createdByEmail": "lead-1@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Resource Allocation Review for lead-1\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Management Overhead Task for lead-2",
+      "description": "Review department deliverables for lead-2",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 4 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "lead-2@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Management Overhead Task for lead-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Strategic Planning Task for lead-2",
+      "description": "Planning future phases and resources for lead-2",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 10 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "lead-2@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Strategic Planning Task for lead-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Resource Allocation Review for lead-2",
+      "description": "Review contributor workloads for next sprint",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Migration Execution",
+      "projectName": "Cloud Infrastructure Migration",
+      "assigneeEmails": [
+        "lead-2@trucode.com"
+      ],
+      "createdByEmail": "lead-2@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Resource Allocation Review for lead-2\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Management Overhead Task for lead-3",
+      "description": "Review department deliverables for lead-3",
+      "priority": "HIGH",
+      "targetStartDate": "TODAY - 10 Days",
+      "targetEndDate": "TODAY - 4 Days",
+      "estimatedHours": 20,
+      "loggedHours": 20,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "lead-3@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "COMPLETE",
+      "acceptanceCriteria": "1. Verify task functionality for \"Management Overhead Task for lead-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Strategic Planning Task for lead-3",
+      "description": "Planning future phases and resources for lead-3",
+      "priority": "CRITICAL",
+      "targetStartDate": "TODAY - 2 Days",
+      "targetEndDate": "TODAY + 10 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "lead-3@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "IN_PROGRESS",
+      "acceptanceCriteria": "1. Verify task functionality for \"Strategic Planning Task for lead-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    },
+    {
+      "title": "Resource Allocation Review for lead-3",
+      "description": "Review contributor workloads for next sprint",
+      "priority": "MEDIUM",
+      "targetStartDate": "TODAY + 5 Days",
+      "targetEndDate": "TODAY + 12 Days",
+      "estimatedHours": 20,
+      "loggedHours": 5,
+      "phaseName": "Design & Prototyping",
+      "projectName": "E-Commerce Mobile UX",
+      "assigneeEmails": [
+        "lead-3@trucode.com"
+      ],
+      "createdByEmail": "lead-3@trucode.com",
+      "status": "PENDING",
+      "acceptanceCriteria": "1. Verify task functionality for \"Resource Allocation Review for lead-3\".\n2. Design code to comply with repository coding guidelines.\n3. Ensure robust integration without regressions."
+    }
+  ],
+  "logs": [
+    {
+      "taskTitle": "Design Wireframes & Styleguide",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-7@trucode.com",
+      "todayWork": "Completed the wireframe layouts and set style tokens for the project.",
+      "hoursWorked": 8,
+      "completionPercentage": 50,
+      "statusUpdatedTo": "IN_PROGRESS",
+      "date": "TODAY - 13 Days"
+    },
+    {
+      "taskTitle": "Design Wireframes & Styleguide",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-7@trucode.com",
+      "todayWork": "Polished layouts, refined typography, and resolved feedback. Marked design tasks complete.",
+      "hoursWorked": 10,
+      "completionPercentage": 100,
+      "statusUpdatedTo": "COMPLETED",
+      "date": "TODAY - 11 Days"
+    },
+    {
+      "taskTitle": "Establish React Boilerplate",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-1@trucode.com",
+      "todayWork": "Created vite build configuration and structured directories.",
+      "hoursWorked": 7,
+      "completionPercentage": 50,
+      "statusUpdatedTo": "IN_PROGRESS",
+      "date": "TODAY - 12 Days"
+    },
+    {
+      "taskTitle": "Establish React Boilerplate",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-1@trucode.com",
+      "todayWork": "Configured router slices, material theme overrides. Tested build locally and it is clean.",
+      "hoursWorked": 8,
+      "completionPercentage": 100,
+      "statusUpdatedTo": "COMPLETED",
+      "date": "TODAY - 10 Days"
+    },
+    {
+      "taskTitle": "Implement JWT Authentication",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-1@trucode.com",
+      "todayWork": "Added token creation utilities and password hashing pre-save hooks in models.",
+      "hoursWorked": 12,
+      "completionPercentage": 50,
+      "statusUpdatedTo": "IN_PROGRESS",
+      "date": "TODAY - 6 Days"
+    },
+    {
+      "taskTitle": "Implement JWT Authentication",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-1@trucode.com",
+      "todayWork": "Integrated refresh token endpoint. Dealing with CORS warning on dynamic requests.",
+      "hoursWorked": 8,
+      "completionPercentage": 80,
+      "statusUpdatedTo": "IN_PROGRESS",
+      "date": "TODAY - 2 Days"
+    },
+    {
+      "taskTitle": "Setup Redux State & Slice Store",
+      "projectName": "Trucode Dashboard System",
+      "contributorEmail": "contri-2@trucode.com",
+      "todayWork": "Structured Redux state store. Marked blocked due to pending endpoints.",
+      "hoursWorked": 10,
+      "completionPercentage": 50,
+      "statusUpdatedTo": "BLOCKED",
+      "blockersText": "Auth Controller API endpoints are not stable yet.",
+      "date": "TODAY - 1 Days"
+    },
+    {
+      "taskTitle": "Audit Infrastructure & Security Rules",
+      "projectName": "Cloud Infrastructure Migration",
+      "contributorEmail": "contri-5@trucode.com",
+      "todayWork": "Finished security reviews on subnet routing. Documented AWS configurations.",
+      "hoursWorked": 16,
+      "completionPercentage": 100,
+      "statusUpdatedTo": "COMPLETED",
+      "date": "TODAY - 7 Days"
+    }
+  ],
+  "notifications": [
+    {
+      "receiverEmail": "superadmin@trucode.com",
+      "senderEmail": "user-1@trucode.com",
+      "message": "New Employee Registered - Name: Shrikant Shinde, Employee ID: EMP-9991. Please assign role.",
+      "type": "REGISTRATION_APPROVAL",
+      "link": "/users",
+      "isRead": false,
+      "createdAt": "TODAY - 2 Days"
+    },
+    {
+      "receiverEmail": "superadmin@trucode.com",
+      "senderEmail": "user-2@trucode.com",
+      "message": "New Employee Registered - Name: Varsha Bhosale, Employee ID: EMP-9992. Please assign role.",
+      "type": "REGISTRATION_APPROVAL",
+      "link": "/users",
+      "isRead": false,
+      "createdAt": "TODAY - 1 Days"
+    },
+    {
+      "receiverEmail": "contri-1@trucode.com",
+      "senderEmail": "lead-1@trucode.com",
+      "taskTitle": "Implement JWT Authentication",
+      "projectName": "Trucode Dashboard System",
+      "message": "You have been assigned to Task: Implement JWT Authentication under Project: Trucode Dashboard System",
+      "type": "TASK_ASSIGNED",
+      "link": "/tasks",
+      "isRead": false,
+      "createdAt": "TODAY - 8 Days"
+    },
+    {
+      "receiverEmail": "lead-1@trucode.com",
+      "senderEmail": "contri-2@trucode.com",
+      "taskTitle": "Setup Redux State & Slice Store",
+      "projectName": "Trucode Dashboard System",
+      "message": "Task Setup Redux State & Slice Store has been BLOCKED by Rahul Sharma. Reason: Auth Controller API endpoints are not stable yet.",
+      "type": "TASK_BLOCKED",
+      "link": "/tasks",
+      "isRead": false,
+      "createdAt": "TODAY - 1 Days"
+    }
+  ],
+  "audits": [
+    {
+      "action": "CREATE_PROJECT",
+      "actorEmail": "lead-1@trucode.com",
+      "actorRole": "TEAM_LEAD",
+      "details": {
+        "projectCode": "PRJ-882731",
+        "name": "Trucode Dashboard System"
+      },
+      "createdAt": "TODAY - 15 Days"
+    },
+    {
+      "action": "CREATE_TASK",
+      "actorEmail": "lead-1@trucode.com",
+      "actorRole": "TEAM_LEAD",
+      "details": {
+        "title": "Implement JWT Authentication"
+      },
+      "createdAt": "TODAY - 8 Days"
+    },
+    {
+      "action": "ASSIGN_ROLE",
+      "actorEmail": "superadmin@trucode.com",
+      "actorRole": "SUPER_ADMIN",
+      "details": {
+        "userEmail": "contri-1@trucode.com",
+        "role": "CONTRIBUTOR"
+      },
+      "createdAt": "TODAY - 14 Days"
+    }
+  ]
+}

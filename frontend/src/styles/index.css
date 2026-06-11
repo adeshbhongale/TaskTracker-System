@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color-scheme: light;
+}
+
+/* Custom Scrollbar for light premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth Transitions & Micro-animations */
+.fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.35s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Light Glassmorphism panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Recharts Tooltip custom style overrides */
+.recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  font-size: 13px !important;
+}
+
+/* Filter card styles */
+.filter-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+/* Status badge uniform sizing */
+.status-chip {
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  height: 22px !important;
+}
+
+/* Table row hover transition */
+.MuiTableRow-root:hover {
+  transition: background-color 0.15s ease;
+}
+
+/* KPI metric card hover */
+.kpi-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
