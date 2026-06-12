@@ -20,7 +20,7 @@ const initSocket = (server) => {
           userSockets.set(userId, new Set());
         }
         userSockets.get(userId).add(socket.id);
-        console.log(`Socket client registered: User ID ${userId}, Socket ID ${socket.id}`);
+        console.log(`Socket client registered`);
       }
     });
 

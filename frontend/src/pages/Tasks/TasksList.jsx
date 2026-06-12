@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { jsPDF } from 'jspdf';
 import apiService from '../../services/api';
 
 const TasksList = () => {
@@ -69,156 +70,150 @@ const TasksList = () => {
     setReportDropdownOpen(false);
     const { startDate, endDate } = getDateRange(period);
 
-    // Fetch task details with day statuses
-    const tasksWithDetails = [];
-    for (const task of tasks) {
-      try {
-        const taskDetails = await apiService(`/tasks/${task._id}`);
-        tasksWithDetails.push(taskDetails);
-      } catch (err) {
-        tasksWithDetails.push(task);
+    try {
+      // Fetch task details with day statuses
+      const tasksWithDetails = [];
+      for (const task of tasks) {
+        if (!task || !task._id) continue;
+        try {
+          const taskDetails = await apiService(`/tasks/${task._id}`);
+          tasksWithDetails.push(taskDetails);
+        } catch (err) {
+          tasksWithDetails.push(task);
+        }
       }
-    }
 
-    // Filter tasks and day statuses by date range
-    const filteredTasks = tasksWithDetails.map(task => {
-      const filteredDayStatuses = (task.dayStatuses || []).filter(ds => {
-        const dsDate = new Date(ds.date);
-        if (!startDate || !endDate) return true;
-        return dsDate >= startDate && dsDate <= endDate;
+      // Filter tasks and day statuses by date range
+      const filteredTasks = tasksWithDetails.filter(t => t).map(task => {
+        const filteredDayStatuses = (task.dayStatuses || []).filter(ds => {
+          if (!ds || !ds.date) return false;
+          const dsDate = new Date(ds.date);
+          if (!startDate || !endDate) return true;
+          return dsDate >= startDate && dsDate <= endDate;
+        });
+        return { ...task, dayStatuses: filteredDayStatuses };
       });
-      return { ...task, dayStatuses: filteredDayStatuses };
-    }).filter(task => {
-      // Include task if it has day statuses in range, or if no range selected
-      if (!startDate || !endDate) return true;
-      return task.dayStatuses.length > 0;
-    });
 
-    const periodLabel = {
-      daily: 'Daily Report - ' + startDate.toLocaleDateString(),
-      weekly: 'Weekly Report - ' + startDate.toLocaleDateString() + ' to ' + endDate.toLocaleDateString(),
-      monthly: 'Monthly Report - ' + startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-    }[period];
+      const periodLabel = {
+        daily: 'Daily Report - ' + (startDate ? startDate.toLocaleDateString() : 'N/A'),
+        weekly: 'Weekly Report - ' + (startDate ? startDate.toLocaleDateString() : 'N/A') + ' to ' + (endDate ? endDate.toLocaleDateString() : 'N/A'),
+        monthly: 'Monthly Report - ' + (startDate ? startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : 'N/A')
+      }[period] || 'Report';
 
-    // Generate PDF
-    const doc = new jsPDF();
-    const pageWidth = doc.internal.pageSize.width;
-    const pageHeight = doc.internal.pageSize.height;
-    const marginLeft = 14;
-    const marginRight = 14;
-    const marginTop = 20;
-    let currentY = marginTop;
+      // Generate PDF
+      const doc = new jsPDF('l', 'mm', 'a4');
+      const pageWidth = doc.internal.pageSize.width;
+      const pageHeight = doc.internal.pageSize.height;
+      const marginLeft = 14;
+      const marginRight = 14;
+      const marginTop = 20;
+      let currentY = marginTop;
 
-    // Helper function to add text with wrapping
-    const addWrappedText = (text, x, y, maxWidth, fontSize = 12, font = 'helvetica', style = 'normal') => {
-      doc.setFont(font, style);
-      doc.setFontSize(fontSize);
-      const lines = doc.splitTextToSize(text, maxWidth);
-      doc.text(lines, x, y);
-      return y + (lines.length * (fontSize * 0.6));
-    };
+      // Title
+      doc.setFontSize(20);
+      doc.setFont('Helvetica', 'bold');
+      doc.text(periodLabel, pageWidth / 2, currentY, { align: 'center' });
+      currentY += 12;
 
-    // Title
-    doc.setFontSize(20);
-    doc.setFont('helvetica', 'bold');
-    doc.text(periodLabel, pageWidth / 2, currentY, { align: 'center' });
-    currentY += 12;
+      // Tasks Overview Section
+      doc.setFontSize(16);
+      doc.text('Tasks Overview', marginLeft, currentY);
+      currentY += 10;
 
-    // Tasks Overview Section
-    doc.setFontSize(16);
-    doc.text('Tasks Overview', marginLeft, currentY);
-    currentY += 10;
+      // Table Header
+      doc.setFontSize(10);
+      doc.setFont('Helvetica', 'bold');
+      doc.text('Task ID', marginLeft, currentY);
+      doc.text('Title', marginLeft + 30, currentY);
+      doc.text('Project', marginLeft + 90, currentY);
+      doc.text('Priority', marginLeft + 130, currentY);
+      doc.text('Status', marginLeft + 155, currentY);
+      doc.text('Start Date', marginLeft + 180, currentY);
+      doc.text('Target End', marginLeft + 210, currentY);
+      doc.text('Actual', marginLeft + 240, currentY);
+      currentY += 6;
 
-    // Table Header
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
-    doc.text('Task ID', marginLeft, currentY);
-    doc.text('Title', marginLeft + 30, currentY);
-    doc.text('Project', marginLeft + 90, currentY);
-    doc.text('Priority', marginLeft + 130, currentY);
-    doc.text('Status', marginLeft + 155, currentY);
-    doc.text('Start Date', marginLeft + 180, currentY);
-    doc.text('Target End', marginLeft + 210, currentY);
-    doc.text('Actual', marginLeft + 240, currentY);
-    currentY += 6;
+      // Table Content
+      doc.setFont('Helvetica', 'normal');
+      filteredTasks.forEach(task => {
+        if (currentY > pageHeight - 30) {
+          doc.addPage();
+          currentY = marginTop;
+        }
+        doc.text(String(task.taskId || ''), marginLeft, currentY);
+        const taskTitle = task.title || '';
+        const title = taskTitle.length > 25 ? taskTitle.substring(0, 22) + '...' : taskTitle;
+        doc.text(title, marginLeft + 30, currentY);
+        const projName = task.project?.name?.length > 20 ? task.project.name.substring(0, 17) + '...' : task.project?.name || 'N/A';
+        doc.text(projName, marginLeft + 90, currentY);
+        doc.text(String(task.priority || ''), marginLeft + 130, currentY);
+        doc.text(String(task.status || ''), marginLeft + 155, currentY);
+        doc.text(task.targetStartDate ? new Date(task.targetStartDate).toLocaleDateString() : 'N/A', marginLeft + 180, currentY);
+        doc.text(task.targetEndDate ? new Date(task.targetEndDate).toLocaleDateString() : 'N/A', marginLeft + 210, currentY);
+        doc.text(task.actualCompletionDate ? new Date(task.actualCompletionDate).toLocaleDateString() : 'N/A', marginLeft + 240, currentY);
+        currentY += 6;
+      });
 
-    // Table Content
-    doc.setFont('helvetica', 'normal');
-    filteredTasks.forEach(task => {
+      // Daily Status Updates Section
+      currentY += 10;
       if (currentY > pageHeight - 30) {
         doc.addPage();
         currentY = marginTop;
       }
-      doc.text(task.taskId, marginLeft, currentY);
-      const title = task.title.length > 25 ? task.title.substring(0, 22) + '...' : task.title;
-      doc.text(title, marginLeft + 30, currentY);
-      const projName = task.project?.name?.length > 20 ? task.project.name.substring(0, 17) + '...' : task.project?.name || 'N/A';
-      doc.text(projName, marginLeft + 90, currentY);
-      doc.text(task.priority, marginLeft + 130, currentY);
-      doc.text(task.status, marginLeft + 155, currentY);
-      doc.text(task.targetStartDate ? new Date(task.targetStartDate).toLocaleDateString() : 'N/A', marginLeft + 180, currentY);
-      doc.text(task.targetEndDate ? new Date(task.targetEndDate).toLocaleDateString() : 'N/A', marginLeft + 210, currentY);
-      doc.text(task.actualCompletionDate ? new Date(task.actualCompletionDate).toLocaleDateString() : 'N/A', marginLeft + 240, currentY);
-      currentY += 6;
-    });
+      doc.setFontSize(16);
+      doc.setFont('Helvetica', 'bold');
+      doc.text('Daily Status Updates', marginLeft, currentY);
+      currentY += 10;
 
-    // Daily Status Updates Section
-    currentY += 10;
-    if (currentY > pageHeight - 30) {
-      doc.addPage();
-      currentY = marginTop;
-    }
-    doc.setFontSize(16);
-    doc.setFont('helvetica', 'bold');
-    doc.text('Daily Status Updates', marginLeft, currentY);
-    currentY += 10;
-
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    filteredTasks.filter(task => task.dayStatuses && task.dayStatuses.length > 0).forEach(task => {
-      // Task header
-      if (currentY > pageHeight - 40) {
-        doc.addPage();
-        currentY = marginTop;
-      }
-      doc.setFont('helvetica', 'bold');
-      doc.text(task.taskId + ' - ' + task.title, marginLeft, currentY);
-      doc.setFont('helvetica', 'normal');
-      currentY += 6;
-
-      // Day statuses
-      [...task.dayStatuses].sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(ds => {
+      doc.setFontSize(10);
+      doc.setFont('Helvetica', 'normal');
+      filteredTasks.filter(task => task.dayStatuses && task.dayStatuses.length > 0).forEach(task => {
+        // Task header
         if (currentY > pageHeight - 40) {
           doc.addPage();
           currentY = marginTop;
         }
-        doc.setFillColor(240, 248, 255);
-        doc.rect(marginLeft - 1, currentY - 4, pageWidth - marginLeft - marginRight + 2, 16, 'F');
-        const dateStr = new Date(ds.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-        doc.setFont('helvetica', 'bold');
-        doc.text(dateStr + ' - ' + (ds.addedBy?.name || 'Unknown'), marginLeft, currentY);
-        doc.setFont('helvetica', 'normal');
-        currentY += 5;
-        const statusLines = doc.splitTextToSize(ds.status, pageWidth - marginLeft - marginRight);
-        doc.text(statusLines, marginLeft, currentY);
-        currentY += (statusLines.length * 4) + 4;
+        doc.setFont('Helvetica', 'bold');
+        doc.text(String(task.taskId || 'N/A') + ' - ' + String(task.title || 'N/A'), marginLeft, currentY);
+        doc.setFont('Helvetica', 'normal');
+        currentY += 6;
+
+        // Day statuses
+        [...task.dayStatuses].sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(ds => {
+          if (currentY > pageHeight - 40) {
+            doc.addPage();
+            currentY = marginTop;
+          }
+          doc.setFillColor(240, 248, 255);
+          doc.rect(marginLeft - 1, currentY - 4, pageWidth - marginLeft - marginRight + 2, 16, 'F');
+          const dateStr = ds.date ? new Date(ds.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A';
+          doc.setFont('Helvetica', 'bold');
+          doc.text(dateStr + ' - ' + (ds.addedBy?.name || 'Unknown'), marginLeft, currentY);
+          doc.setFont('Helvetica', 'normal');
+          currentY += 5;
+          const statusLines = doc.splitTextToSize(String(ds.status || ''), pageWidth - marginLeft - marginRight);
+          doc.text(statusLines, marginLeft, currentY);
+          currentY += (statusLines.length * 4) + 4;
+        });
       });
-    });
 
-    const noStatuses = filteredTasks.filter(task => task.dayStatuses && task.dayStatuses.length > 0).length === 0;
-    if (noStatuses) {
-      doc.text('No daily status updates found for this period.', marginLeft, currentY);
+      const noStatuses = filteredTasks.filter(task => task.dayStatuses && task.dayStatuses.length > 0).length === 0;
+      if (noStatuses) {
+        doc.text('No daily status updates found for this period.', marginLeft, currentY);
+      }
+
+      // Save the PDF
+      doc.save(`${periodLabel.replace(/\s+/g, '_')}.pdf`);
+    } catch (err) {
+      console.error('Failed to generate report PDF:', err);
     }
-
-    // Save the PDF
-    doc.save(`${periodLabel.replace(/\s+/g, '_')}.pdf`);
   };
 
   useEffect(() => { loadData(); }, [selectedProj, selectedStatus, selectedPriority]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (reportDropdownOpen && !event.target.closest('.tc-btn')) {
+      if (reportDropdownOpen && !event.target.closest('.tc-dropdown-container')) {
         setReportDropdownOpen(false);
       }
     };
@@ -263,7 +258,7 @@ const TasksList = () => {
           <p className="tc-body" style={{ marginTop: 4 }}>Review detailed modules descriptions, track daily progress logs, and resolve blockers.</p>
         </div>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-          <div style={{ position: 'relative' }}>
+          <div style={{ position: 'relative' }} className="tc-dropdown-container">
             <button
               className="tc-btn tc-btn-secondary"
               onClick={() => setReportDropdownOpen(!reportDropdownOpen)}
